@@ -1,0 +1,17 @@
+<div class="posts-container">
+  <button class="add-btn" (click)="create.emit()">➕ Add Post</button>
+
+  <div *ngIf="loading" class="loader">Loading posts...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <ul class="posts-list">
+    <li class="post-card" *ngFor="let post of posts">
+      <div class="post-title">{{ post.title }}</div>
+      <div class="post-actions">
+        <button class="delete-btn" (click)="delete.emit(post.id)">
+          🗑 Delete
+        </button>
+      </div>
+    </li>
+  </ul>
+</div>

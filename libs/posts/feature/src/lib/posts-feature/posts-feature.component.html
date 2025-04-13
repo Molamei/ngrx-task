@@ -1,0 +1,7 @@
+<lib-posts-ui
+      [posts]="posts$ | async"
+      [loading]="loading$ | async"
+      [error]="error$ | async"
+      (create)="onCreate()"
+      (delete)="onDelete($event)"
+    />

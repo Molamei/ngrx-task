@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@rh/posts/domain": ["libs/posts/domain/src/index.ts"],
+      "@rh/posts/feature": ["libs/posts/feature/src/index.ts"],
+      "@rh/posts/ui": ["libs/posts/ui/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

@@ -10,6 +10,7 @@
     ],
     "sharedGlobals": []
   },
+  "defaultProject": "first-demo",
   "targetDefaults": {
     "@angular-devkit/build-angular:application": {
       "cache": true,
@@ -32,6 +33,14 @@
       "linter": "eslint",
       "style": "scss",
       "unitTestRunner": "none"
+    },
+    "@nx/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "none",
+      "style": "scss"
+    },
+    "@nx/angular:component": {
+      "style": "scss"
     }
   }
 }
