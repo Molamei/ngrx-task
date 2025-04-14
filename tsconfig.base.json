@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@rh/login/domain": ["libs/login/domain/src/index.ts"],
+      "@rh/login/feature": ["libs/login/feature/src/index.ts"],
+      "@rh/login/ui": ["libs/login/ui/src/index.ts"],
       "@rh/posts/domain": ["libs/posts/domain/src/index.ts"],
       "@rh/posts/feature": ["libs/posts/feature/src/index.ts"],
       "@rh/posts/ui": ["libs/posts/ui/src/index.ts"]

@@ -1,0 +1,6 @@
+<lib-login-ui
+  [form]="form"
+  [loading]="(loading$ | async) || false"
+  [error]="error$ | async"
+  (submit)="onSubmit()"
+/>

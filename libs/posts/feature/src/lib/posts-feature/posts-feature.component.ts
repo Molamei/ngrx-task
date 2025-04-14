@@ -8,6 +8,7 @@ import { PostsUiComponent } from '../../../../ui/src/lib/posts-ui/posts-ui.compo
 @Component({
   selector: 'lib-posts-feature',
   imports: [CommonModule,PostsUiComponent ],
+  providers:[PostsStore],
   templateUrl: './posts-feature.component.html',
   styleUrl: './posts-feature.component.scss',
 })
