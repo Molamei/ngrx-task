@@ -15,12 +15,20 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@rh/dashboard/domain": ["libs/dashboard/domain/src/index.ts"],
+      "@rh/dashboard/feature": ["libs/dashboard/feature/src/index.ts"],
       "@rh/login/domain": ["libs/login/domain/src/index.ts"],
       "@rh/login/feature": ["libs/login/feature/src/index.ts"],
       "@rh/login/ui": ["libs/login/ui/src/index.ts"],
       "@rh/posts/domain": ["libs/posts/domain/src/index.ts"],
       "@rh/posts/feature": ["libs/posts/feature/src/index.ts"],
-      "@rh/posts/ui": ["libs/posts/ui/src/index.ts"]
+      "@rh/posts/ui": ["libs/posts/ui/src/index.ts"],
+      "@rh/tasks/domain": ["libs/tasks/domain/src/index.ts"],
+      "@rh/tasks/feature": ["libs/tasks/feature/src/index.ts"],
+      "@rh/tasks/ui": ["libs/tasks/ui/src/index.ts"],
+      "@rh/users/domain": ["libs/users/domain/src/index.ts"],
+      "@rh/users/feature": ["libs/users/feature/src/index.ts"],
+      "@rh/users/ui": ["libs/users/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

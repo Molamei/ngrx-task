@@ -1,0 +1,33 @@
+<div class="protocols-container" *ngIf="vm$ | async as vm">
+    <h3>Protocol</h3>
+  
+    <input
+      type="text"
+      placeholder="Search..."
+      class="search-box"
+      [(ngModel)]="searchTerm"
+    />
+  
+    <div
+      *ngFor="let group of vm.resource"
+      class="protocol-group"
+    >
+      <div
+        class="group-header"
+        (click)="toggleGroup(group.groupId)"
+      >
+        <span>{{ isExpanded(group.groupId) ? '−' : '+' }}</span>
+        {{ group.groupName }}
+      </div>
+  
+      <div class="group-body" *ngIf="isExpanded(group.groupId)">
+        <ul>
+          <li *ngFor="let protocol of group.protocols">
+            <div class="protocol-name">{{ protocol.name }}</div>
+            <div class="protocol-details">{{ protocol.details }}</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  

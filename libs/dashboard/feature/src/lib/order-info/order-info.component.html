@@ -1,0 +1,54 @@
+<div class="order-info-card" *ngIf="vm$ | async as vm; else noData">
+    <h3>Order Information</h3>
+    <div class="grid-container">
+      <!-- Column 1 -->
+      <div class="col">
+        <div><strong>Patient Name:</strong> {{ vm.resource.patientName }}</div>
+        <div><strong>Patient ID:</strong> {{ vm.resource.patientId }}</div>
+        <div><strong>Sex:</strong> {{ vm.resource.sex }}</div>
+        <div><strong>Age:</strong> {{ vm.resource.age }}</div>
+        <div><strong>Birth Date:</strong> {{ vm.resource.birthDate }}</div>
+        <div><strong>Patient Eligibility:</strong> {{ vm.resource.patientEligibility }}</div>
+        <div><strong>Allergy:</strong> {{ vm.resource.allergeies }}</div>
+        <div><strong>Site:</strong> {{ vm.resource.site }}</div>
+      </div>
+  
+      <!-- Column 2 -->
+      <div class="col">
+        <div><strong>Accession Number:</strong> {{ vm.resource.accessionNumber }}</div>
+        <div><strong>Study Description:</strong> {{ vm.resource.procedureDescription }}</div>
+        <div><strong>Modality:</strong> {{ vm.resource.modality }}</div>
+        <div><strong>Patient Type:</strong> {{ vm.resource.patientType }}</div>
+        <div><strong>Priority:</strong> {{ vm.resource.priority }}</div>
+        <div><strong>Reason for Exam:</strong> {{ vm.resource.reasonForExam }}</div>
+        <div><strong>Area of Interest:</strong> {{ vm.resource.areaOfInterest }}</div>
+        <div><strong>Body Region:</strong> {{ vm.resource.bodyRegion }}</div>
+      </div>
+  
+      <!-- Column 3 -->
+      <div class="col">
+        <div><strong>Order Status:</strong> New</div>
+        <div><strong>Order Date:</strong> {{ vm.resource.orderDate }}</div>
+        <div><strong>Desired Date:</strong> {{ vm.resource.desiredDate }}</div>
+        <div><strong>Att. Physician:</strong> {{ vm.resource.attendingPhysician }}</div>
+        <div><strong>Ord. Physician:</strong> {{ vm.resource.orderingPhysician }}</div>
+        <div><strong>Ord. Dept.:</strong> {{ vm.resource.orderDepartment }}</div>
+        <div><strong>Ord. Location:</strong> {{ vm.resource.mappedOrderLocation }}</div>
+        <div><strong>Subspeciality:</strong>
+          <ul>
+            <li *ngFor="let sub of vm.resource.subspeciality">{{ sub }}</li>
+          </ul>
+        </div>
+        <div><strong>Vetting Status:</strong> Pending</div>
+      </div>
+    </div>
+  
+    <div class="section">
+      <strong>Clinical Information:</strong> {{ vm.resource.clinicalIndication }}
+    </div>
+  </div>
+  
+  <ng-template #noData>
+    <p>No data available.</p>
+  </ng-template>
+  
